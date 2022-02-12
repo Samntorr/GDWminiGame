@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: road
+    uniqueID: 4220973973
+    locked: 0
+  - name: curb
+    uniqueID: 380874031
+    locked: 0
+  - name: house
+    uniqueID: 3611741921
+    locked: 0
+  - name: npc
+    uniqueID: 3908620665
+    locked: 0
+  - name: player
+    uniqueID: 535288491
+    locked: 0

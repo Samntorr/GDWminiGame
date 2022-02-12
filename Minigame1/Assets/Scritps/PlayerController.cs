@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Input
-
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
