@@ -24,4 +24,30 @@ public class PlayerController : MonoBehaviour
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Road"))
+        {
+            moveSpeed = moveSpeed + 5;
+        }
+
+        if (collision.CompareTag("Curb"))
+        {
+            moveSpeed = moveSpeed - 3;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Road"))
+        {
+            moveSpeed = moveSpeed - 5;
+        }
+
+        if (collision.CompareTag("Curb"))
+        {
+            moveSpeed = moveSpeed + 3;
+        }
+    }
 }
