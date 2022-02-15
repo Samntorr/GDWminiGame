@@ -8,6 +8,10 @@ TagManager:
   - Curb
   - Home
   - Path
+  - npc
+  - limb
+  - my limbs
+  - wall
   layers:
   - Default
   - TransparentFX

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class SpawnNpc : MonoBehaviour
 {
+    //list of npc Prefabs
     public GameObject[] npcPrefabs;
+    //Make a Transform list variable to store path transforms
+    public Transform[] paths;
 
-    private float spawnPosX = 40f;
-    private float spawnPosY = 100f;
+    //specific one path chosen out of the Random.Range
+    private Transform path;
 
+    //Delay, interval, and limit of spawn
     private float startDelay = 2;
     private float spawnInterval = 1.5f;
 
@@ -20,7 +24,11 @@ public class SpawnNpc : MonoBehaviour
 
     void SpawnRandomNpc()
     {
-        Vector2 spawnPos = new Vector2(Random.Range(-spawnPosX, spawnPosX), Random.Range(-spawnPosY, spawnPosY));
+        //Select a singular Transform from the list randomly, and store it in the selected path variable
+        int pathIndex = Random.Range(0, paths.Length);
+        path = paths[pathIndex];
+
+        Vector2 spawnPos = path.position;
 
         int npcIndex = Random.Range(0, npcPrefabs.Length);
 

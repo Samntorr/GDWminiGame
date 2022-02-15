@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2781997788606518395}
   - component: {fileID: 2781997788606518394}
   - component: {fileID: 2781997788606518393}
+  - component: {fileID: -7018708070520001086}
   m_Layer: 0
   m_Name: Arms Man
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,3 +122,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7018708070520001086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781997788606518392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da89e3972bcf3d442b90d7312798fbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

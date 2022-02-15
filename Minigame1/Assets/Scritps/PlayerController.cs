@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float roadSpeed = 5f;
-    public float curbSpeed = 4f;
+    //movement speeds
+    private float moveSpeed = 8f;
+    private float roadSpeed = 5f;
+    private float curbSpeed = 3.5f;
+
+    public GameObject projectilePrefab;
 
     //range for bounds
-    public float xRange = 40f;
-    public float yRange = 90f;
+    private float xRange = 40f;
+    private float yRange = 90f;
 
     public Rigidbody2D rb;
 
@@ -39,6 +42,13 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y > yRange)
         {
             transform.position = new Vector2(transform.position.x, yRange);
+        }
+
+        //Projectile
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Launch projectile from player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
 
